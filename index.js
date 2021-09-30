@@ -10,6 +10,10 @@ const express = require('express')
 const server = express()
 server.use(express.json())
 
+server.get('/', (req, res) => {
+    res.json({ message: 'web 46 project' })
+})
+
 server.get('/hello', (req, res) => {
     res.send('<h1>HELLO THERE!<h1>')
 })
